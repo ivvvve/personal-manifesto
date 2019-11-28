@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: whitesmoke;
+  color: #222;
+  font-size: 18px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.wrapper {
+  /* display: grid; */
+  /* grid-template-columns: repeat(4, 1fr); */
+  padding: 40px;
+}
+
+h1, h2, h3, p {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  grid-column: 1/5;
+  text-align: center;
+  font-size: 3em
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  grid-column: 1/5;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+li {
+  flex: 0 1 300px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+li p:hover, .policyHeader:hover, li a:hover, .btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+li a {
+  color: slategrey;
+}
+
+#policySpan {
+  color: slategrey;
+}
+
+#compareDiv {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+#resultsHeader {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+}
+
+#intro p {
+  max-width: 500px;
+  align-self: center;
+}
+
+#resultsHeader div {
+    flex: 0 -1 400px;
+    font-size: 1em;
+    margin: 40px;
+}
+
+#overview {
+  display: inline-block;
+}
+
+#overview h2 {
+  margin-top: 0px;
+}
+
+#shares {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn { 
+  background-color: slategrey;
+  border-radius: 3px;
+  padding: 10px;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 2em;
+}
+
+.lab, .con, .policyHeader{
+  color: whitesmoke;
+  padding: 40px;
+  border-radius: 3px;
+  font-size: 1.4em;
+}
+
+.policyHeader {
+  background-color: slategrey;
+}
+
+.lab {
+  background-color: red;
+}
+
+.con {
+  background-color: blue;
+}
+
+@media screen and (max-width: 800px) {
+  #resultsHeader {
+    display: block;
+  }
+}
