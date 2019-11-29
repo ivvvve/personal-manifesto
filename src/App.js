@@ -227,12 +227,12 @@ class App extends Component {
   render() {
     if (this.state.pos === -1) {
       return (
-        <div class="wrapper" id="intro">
+        <div className="wrapper" id="intro">
         <h1>Personal manifesto</h1>
         <p>
           Est reprehenderit eu nisi occaecat enim reprehenderit magna. Non laborum Lorem laborum et do velit velit est ex eu velit esse cupidatat. Incididunt commodo sit culpa nulla ut proident nisi ad cillum est enim id nisi incididunt. Nisi incididunt do aliquip veniam reprehenderit eiusmod.
         </p>
-        <p class="btn" onClick={this.posUp}>Continue ↷</p>
+        <p className="btn" onClick={this.posUp}>Continue ↷</p>
       </div>
       )
     } else if (this.state.pos < this.state.policies.length) {

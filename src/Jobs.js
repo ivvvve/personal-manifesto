@@ -5,7 +5,7 @@ class Policy extends Component {
 
     render() {
         return (
-            <div class="wrapper" id="policyWrapper">
+            <div className="wrapper" id="policyWrapper">
                 <h1><span id="policySpan">{this.props.policy.name}</span></h1>
                 <ul id="compareDiv">
                     {

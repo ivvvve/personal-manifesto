@@ -4,15 +4,16 @@ import './App.css';
 
 class Choices extends Component {
 
-    choiceList = this.props.choices.map((c, key) =><p>{c}</p>);
+    
     
     render() {
-        {console.log(this.props.choices[0])}
+        const choiceList = this.props.choices.map((c, key) =><p key={key}>{c}</p>);
+        
         return (
-        <div class="wrapper">
+        <div className="wrapper">
                 <h1>Personal manifesto</h1>
             <div id="myManifesto">
-                { this.choiceList }
+                { choiceList }
             </div>
             <Share quote='Check out my manifesto'/>
             <h3>Still undecided?</h3>

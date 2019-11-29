@@ -6,28 +6,27 @@ import './App.css';
 
 
 class Share extends Component {
-
-    shareUrl = "https://google.com";
-    title = this.props.quote;
-
     render() {
+        const shareUrl = process.env.PUBLIC_URL;
+        const title = this.props.quote;
+        
         return (
             <div id="shares">
                 <FacebookShareButton
-                    url={this.shareUrl}
-                    quote={this.title}
+                    url={shareUrl}
+                    quote={title}
                 >
                     <FacebookIcon size={32} round></FacebookIcon>
                 </FacebookShareButton>
                 <TwitterShareButton
-                    url={this.shareUrl}
-                    title={this.title}
+                    url={shareUrl}
+                    title={title}
                 >
                     <TwitterIcon size={32} round></TwitterIcon>
                 </TwitterShareButton>
                 <WhatsappShareButton
-                    url={this.shareUrl}
-                    title={this.title}
+                    url={shareUrl}
+                    title={title}
                 >
                     <WhatsappIcon size={32} round></WhatsappIcon>
                 </WhatsappShareButton>
