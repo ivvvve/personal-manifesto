@@ -2,8 +2,8 @@
 
 body {
   font-family: 'Work Sans', sans-serif;
-  background-color: whitesmoke;
-  color: #222;
+  background-color: aliceblue;
+  color: black;
   font-size: 18px;
 }
 
@@ -71,10 +71,11 @@ li {
   padding: 40px;
   margin: 20px;
   font-family: 'Work Sans', sans-serif;
+  background: wheat;
+  cursor: pointer;
 }
 
 li p:hover, .policyHeader:hover, li a:hover, .btn:hover {
-  cursor: pointer;
   opacity: 0.9;
 }
 
@@ -120,6 +121,18 @@ li a {
 
 #overview h2 {
   margin-top: 0px;
+}
+
+#myManifesto {
+  grid-column: 2/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#myManifesto p {
+  max-width: 500px;
+  text-align: left;
 }
 
 #shares {

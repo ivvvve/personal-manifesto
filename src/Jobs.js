@@ -15,7 +15,7 @@ class Policy extends Component {
                         </li>)
                     }
                 </ul>
-            </div>
+            </div>            
         );
     }
 }
