@@ -173,3 +173,7 @@ li a {
     display: block;
   }
 }
+
+[role=button], .btn {
+  cursor: pointer;
+}

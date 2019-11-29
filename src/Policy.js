@@ -11,7 +11,7 @@ class Policy extends Component {
                     {
                         this.props.policy.options.map((c, key) =>
                             <li onClick={this.props.inc} value={c.answer}>
-                            <p key={key}>{c.text}</p>
+                            <span onClick={this.props.inc} value={c.answer} key={key}>{c.text}</span>
                         </li>)
                     }
                 </ul>

@@ -14,6 +14,7 @@ class Choices extends Component {
             <div id="myManifesto">
                 { this.choiceList }
             </div>
+            <Share quote='Check out my manifesto'/>
             <h3>Still undecided?</h3>
             <h3 onClick={this.props.rePos}>↶ Compare again</h3>
         </div> 

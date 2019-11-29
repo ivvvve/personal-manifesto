@@ -12,17 +12,24 @@ class Share extends Component {
 
     render() {
         return (
-            <div id="shares"><FacebookShareButton
-                url={this.shareUrl}
-                quote={this.title}><FacebookIcon size={32} round></FacebookIcon>
-            </FacebookShareButton>
+            <div id="shares">
+                <FacebookShareButton
+                    url={this.shareUrl}
+                    quote={this.title}
+                >
+                    <FacebookIcon size={32} round></FacebookIcon>
+                </FacebookShareButton>
                 <TwitterShareButton
                     url={this.shareUrl}
-                    title={this.title}><TwitterIcon size={32} round></TwitterIcon>
+                    title={this.title}
+                >
+                    <TwitterIcon size={32} round></TwitterIcon>
                 </TwitterShareButton>
                 <WhatsappShareButton
                     url={this.shareUrl}
-                    title={this.title}><WhatsappIcon size={32} round></WhatsappIcon>
+                    title={this.title}
+                >
+                    <WhatsappIcon size={32} round></WhatsappIcon>
                 </WhatsappShareButton>
             </div>
         );

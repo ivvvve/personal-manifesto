@@ -219,6 +219,7 @@ class App extends Component {
   }
 
   addChoice(event) {
+    event.stopPropagation();
     this.state.choices.push(event.target.attributes[0].value);
     this.posUp();
   }
