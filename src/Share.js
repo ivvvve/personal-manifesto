@@ -13,7 +13,7 @@ class Share extends Component {
         return (
             <div className="shares">
                 <FacebookShareButton
-                    url={shareUrl}
+                    url={`${shareUrl}?utm_source=Facebook%20Share`}
                     quote={title}
                     beforeOnClick={() => window.ga('send', 'event', 'Share', 'Facebook', title)}
                 >
@@ -21,7 +21,7 @@ class Share extends Component {
                     Share
                 </FacebookShareButton>
                 <TwitterShareButton
-                    url={shareUrl}
+                    url={`${shareUrl}?utm_source=Twitter%20Share`}
                     title={title}
                     beforeOnClick={() => window.ga('send', 'event', 'Share', 'Twitter', title)}
                 >
@@ -29,7 +29,7 @@ class Share extends Component {
                     Tweet
                 </TwitterShareButton>
                 <WhatsappShareButton
-                    url={shareUrl}
+                    url={`${shareUrl}?utm_source=WhatsApp%20Share`}
                     title={title}
                     beforeOnClick={() => window.ga('send', 'event', 'Share', 'Whatsapp', title)}
                 >
