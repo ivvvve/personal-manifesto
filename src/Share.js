@@ -15,6 +15,7 @@ class Share extends Component {
                 <FacebookShareButton
                     url={shareUrl}
                     quote={title}
+                    beforeOnClick={() => window.ga('send', 'event', 'Share', 'Facebook', title)}
                 >
                     <FacebookIcon size={32} round></FacebookIcon>
                     Share
@@ -22,6 +23,7 @@ class Share extends Component {
                 <TwitterShareButton
                     url={shareUrl}
                     title={title}
+                    beforeOnClick={() => window.ga('send', 'event', 'Share', 'Twitter', title)}
                 >
                     <TwitterIcon size={32} round></TwitterIcon>
                     Tweet
@@ -29,6 +31,7 @@ class Share extends Component {
                 <WhatsappShareButton
                     url={shareUrl}
                     title={title}
+                    beforeOnClick={() => window.ga('send', 'event', 'Share', 'Whatsapp', title)}
                 >
                     <WhatsappIcon size={32} round></WhatsappIcon>
                     Share

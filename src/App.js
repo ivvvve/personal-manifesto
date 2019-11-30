@@ -43,6 +43,7 @@ class App extends Component {
       this.state.choices.push(answer);
     }
     this.posUp();
+    window.ga('send', 'event', 'Question', question, selection);
   }
 
   render() {
