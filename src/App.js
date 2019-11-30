@@ -6,8 +6,6 @@ import Choices from './Choices.js';
 import data from '../data';
 
 class App extends Component {
-  
-  
   constructor(props){
     super(props)
     this.state = {
@@ -39,9 +37,9 @@ class App extends Component {
     this.setState({ pos: -1 });
   }
 
-  addChoice(event) {
+  addChoice(event, choice) {
     event.stopPropagation();
-    this.state.choices.push(event.target.attributes[0].value);
+    this.state.choices.push(choice);
     this.posUp();
   }
 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import './App.css';
+import Postcode from './Postcode';
 
 class Policy extends Component {
     state = {
@@ -16,7 +18,8 @@ class Policy extends Component {
         }
     }
     
-    goNest(policy) {
+    goNest(e, policy) {
+        e.stopPropagation();
         this.setState({policy});
     }
 
@@ -28,10 +31,13 @@ class Policy extends Component {
         return (
             <div className="wrapper" id="policyWrapper">
                 <h1><span id="policySpan">{this.state.policy.name}</span></h1>
+                {this.state.policy.map && 
+                    <Postcode inc={this.props.inc} options={this.state.policy.options} />
+                }
                 <ul id="compareDiv">
                     { this.state.policy.options.map((c, key) =>
-                        <li key={key} onClick={c.nest ? () => {this.goNest(c.nest)} : this.props.inc} value={c.answer}>
-                            <span onClick={c.nest ? () => {this.goNest(c.nest)} : this.props.inc} value={c.answer} key={key}>{c.text}</span>
+                        <li key={key} onClick={c.nest ? (e) => {this.goNest(e, c.nest)} : (e) => this.props.inc(e, c.answer)}>
+                            <span onClick={c.nest ? (e) => {this.goNest(e, c.nest)} : (e) => this.props.inc(e, c.answer)}>{c.text}</span>
                         </li>
                     )}
                 </ul>
