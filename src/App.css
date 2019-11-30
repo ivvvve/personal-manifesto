@@ -33,9 +33,7 @@ body {
 }
 
 .wrapper {
-  /* display: grid; */
-  /* grid-template-columns: repeat(4, 1fr); */
-  padding: 40px;
+  padding: 15px;
 }
 
 h1, h2, h3, p {
@@ -137,10 +135,13 @@ li a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 #myManifesto p {
-  width: 80%;
+  width: 100%;
+  align-self: center;
+  margin: 0;
 }
 
 #myManifesto > div:hover p {
@@ -149,18 +150,44 @@ li a {
 
 #myManifesto > div:hover .shares {
   display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 #myManifesto .shares {
 
 }
 
+@media (hover: hover) {
+  .shares {
+    display: none !important;
+  }
+
+  #myManifesto > div:hover .shares {
+    display: flex !important;
+  }
+}
+
 .shares {
-  display: none;
-  width: 20%;
+  width: 36%;
   font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 600px) {
+  #myManifesto > div {
+    flex-direction: column;
+  }
+
+  .shares {
+    flex-flow: row;
+  }
+
+  .SocialMediaShareButton > div {
+    margin-bottom: 0;
+  }
 }
 
 .SocialMediaShareButton {
