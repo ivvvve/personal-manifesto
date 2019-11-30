@@ -1,5 +1,5 @@
 {
-  "homepage": "http://558700.github.io/compare-policies",
+  "homepage": "https://558700.github.io/personal-manifesto",
   "name": "2019-11-17_policy-compare",
   "version": "0.1.0",
   "private": true,
@@ -13,7 +13,7 @@
     "gh-pages": "^2.1.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "PUBLIC_URL=https://558700.github.io/personal-manifesto npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
