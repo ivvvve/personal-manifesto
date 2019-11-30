@@ -12,7 +12,7 @@ class Choices extends Component {
             <div id="myManifesto">
                 { choiceList }
             </div>
-            <Share quote='Check out my manifesto'/>
+            <Share/>
             <h3>Still undecided?</h3>
             <h3 onClick={this.props.rePos}>↶ Compare again</h3>
         </div> 

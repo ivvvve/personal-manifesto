@@ -132,6 +132,7 @@ li a {
 
 #myManifesto p {
   max-width: 500px;
+  width: 100%;
   text-align: left;
 }
 
@@ -140,7 +141,7 @@ li a {
   flex-direction: row;
 }
 
-.btn { 
+.btn {
   background-color: slategrey;
   border-radius: 3px;
   padding: 10px;
