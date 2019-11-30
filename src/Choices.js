@@ -4,7 +4,11 @@ import './App.css';
 
 class Choices extends Component {
     render() {
-        const choiceList = this.props.choices.map((c, key) =><p key={key}>{c}</p>);
+        const choiceList = this.props.choices.map((c, key) =>
+            <div key={key}>
+                <p>{c}</p>
+                <Share policy={c} />
+            </div>);
         
         return (
         <div className="wrapper">
@@ -12,7 +16,6 @@ class Choices extends Component {
             <div id="myManifesto">
                 { choiceList }
             </div>
-            <Share/>
             <h3>Still undecided?</h3>
             <h3 onClick={this.props.rePos}>↶ Compare again</h3>
         </div> 

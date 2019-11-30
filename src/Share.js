@@ -8,10 +8,10 @@ import './App.css';
 class Share extends Component {
     render() {
         const shareUrl = process.env.PUBLIC_URL;
-        const title = 'Check out my manifesto';
+        const title = this.props.policy;
 
         return (
-            <div id="shares">
+            <div className="shares">
                 <FacebookShareButton
                     url={shareUrl}
                     quote={title}
