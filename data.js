@@ -154,7 +154,6 @@ module.exports = [
   {
     name: "What broader issues concern you most?",
     options: [
-
       {
         text: "Inequality",
         answer: "You live in a Britain that works for the many not only the few."
@@ -182,7 +181,6 @@ module.exports = [
     options: [
       {
         text: "No children",
-        answer: "[Nothing needed?]"
       },
       {
         text: "Under 5",

@@ -37,9 +37,11 @@ class App extends Component {
     this.setState({ pos: -1 });
   }
 
-  addChoice(event, choice) {
+  addChoice(event, answer, selection, question) {
     event.stopPropagation();
-    this.state.choices.push(choice);
+    if (answer) {
+      this.state.choices.push(answer);
+    }
     this.posUp();
   }
 

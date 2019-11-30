@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Postcode({options, inc}) {
+function Postcode({policy, inc}) {
   const [error, setError] = useState('');
 
   const lookup = (e) => {
@@ -13,13 +13,13 @@ function Postcode({options, inc}) {
     }
     const district = districtMatch[0];
 
-    const region = options.find(o => o.districts.includes(district));
+    const region = policy.options.find(o => o.districts && o.districts.includes(district));
 
     if (!region) {
       setError('Postcode not found');
     }
     setError('');
-    return inc(e, region.answer);
+    return inc(e, region.answer, region.text, policy.name);
   }
 
   return (

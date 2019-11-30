@@ -36,8 +36,8 @@ class Policy extends Component {
                 }
                 <ul id="compareDiv">
                     { this.state.policy.options.map((c, key) =>
-                        <li key={key} onClick={c.nest ? (e) => {this.goNest(e, c.nest)} : (e) => this.props.inc(e, c.answer)}>
-                            <span onClick={c.nest ? (e) => {this.goNest(e, c.nest)} : (e) => this.props.inc(e, c.answer)}>{c.text}</span>
+                        <li key={key} onClick={c.nest ? (e) => {this.goNest(e, c.nest)} : (e) => this.props.inc(e, c.answer, c.text, this.state.policy.name)}>
+                            <span onClick={c.nest ? (e) => {this.goNest(e, c.nest)} : (e) => this.props.inc(e, c.answer, c.text, this.state.policy.name)}>{c.text}</span>
                         </li>
                     )}
                 </ul>
