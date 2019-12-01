@@ -32,7 +32,7 @@ class Policy extends Component {
             <div className="wrapper" id="policyWrapper">
                 <h1><span id="policySpan">{this.state.policy.name}</span></h1>
                 {this.state.policy.map &&
-                    <Postcode inc={this.props.inc} options={this.state.policy.options} />
+                    <Postcode inc={this.props.inc} policy={this.state.policy} />
                 }
                 <ul id="compareDiv">
                     {this.state.policy.options.map((c, key) =>
