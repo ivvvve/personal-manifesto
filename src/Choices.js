@@ -18,7 +18,7 @@ class Choices extends Component {
                 </div>
                 <div className="restart">
                     <h3>Still undecided?</h3>
-                    <div className="btn" onClick={this.props.rePos}>↶ Start again</div>
+                    <div className="btn" onClick={this.props.rePos}>← Start again</div>
                 </div>
             </div>
         )

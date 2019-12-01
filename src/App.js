@@ -59,7 +59,7 @@ class App extends Component {
         <p>
           Est reprehenderit eu nisi occaecat enim reprehenderit magna. Non laborum Lorem laborum et do velit velit est ex eu velit esse cupidatat. Incididunt commodo sit culpa nulla ut proident nisi ad cillum est enim id nisi incididunt. Nisi incididunt do aliquip veniam reprehenderit eiusmod.
         </p>
-        <div className="btn" onClick={this.posUp}>Continue ↷</div>
+        <div className="btn" onClick={this.posUp}>Continue →</div>
       </div>
       )
     } else if (this.state.pos < this.state.policies.length) {
