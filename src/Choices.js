@@ -9,16 +9,18 @@ class Choices extends Component {
                 <p>{c}</p>
                 <Share policy={c} />
             </div>);
-        
+
         return (
-        <div className="wrapper">
-            <h1>Personal manifesto</h1>
-            <div id="myManifesto">
-                { choiceList }
+            <div className="wrapper">
+                <h1>Your Personal Labour Manifesto</h1>
+                <div id="myManifesto">
+                    { choiceList }
+                </div>
+                <div className="restart">
+                    <h3>Still undecided?</h3>
+                    <div className="btn" onClick={this.props.rePos}>↶ Start again</div>
+                </div>
             </div>
-            <h3>Still undecided?</h3>
-            <h3 onClick={this.props.rePos}>↶ Compare again</h3>
-        </div> 
         )
     }
 }

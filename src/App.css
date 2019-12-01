@@ -1,30 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
-
 body {
   font-family: 'Work Sans', sans-serif;
-  background-color: aliceblue;
-  color: black;
+  background-color: #ecdfd1;
+  color: #313131;
   font-size: 18px;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
+  padding: 0;
+  margin: 0;
 }
 
 @keyframes App-logo-spin {
@@ -33,16 +13,22 @@ body {
 }
 
 .wrapper {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 15px;
 }
 
-h1, h2, h3, p {
-  font-family: 'Work Sans', sans-serif;
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  margin: 0 0 1.5rem;
 }
 
 h1 {
   text-align: center;
-  font-size: 8vw
+  font-size: 3rem;
+  line-height: 1.05;
+  color: #bb2f35;
 }
 
 @media screen and (min-width: 600px) {
@@ -51,6 +37,16 @@ h1 {
   }
 }
 
+.btn {
+  background-color: #2daa00;
+  border-radius: 3px;
+  padding: 10px 15px;
+  color: #EEE;
+  text-align: center;
+  font-size: 2em;
+  display: inline-block;
+  margin: 0 auto;
+}
 
 h2 {
   font-size: 2em;
@@ -71,34 +67,54 @@ ul {
 li {
   flex: 0 1 300px;
   text-align: center;
+  border-radius: 4px;
   padding: 40px 15px;
   margin: 20px 10px 0;
   font-family: 'Work Sans', sans-serif;
-  background: wheat;
+  background: #FFF;
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+li:hover {
+  border: 2px solid #bb2f35;
+  padding: 38px 13px;
+}
+
+.all-wrap {
+  margin-top: 15px;
+  padding: 15px 0;
 }
 
 li.all {
+}
+
+.skip-wrap {
   margin-top: 30px;
+  padding: 15px 0;
+  border-top: #CCC dashed 2px;
 }
 
 li.skipPolicy {
   align-self: flex-end;
-  background: #ddd;
   padding: 10px 15px;
-  flex: 0 1 auto;
-  margin-top: 30px;
+  flex: 0 1 200px;
+}
+
+li.skipPolicy:hover {
+  padding: 8px 13px;
 }
 
 @media screen and (max-width: 600px) {
   li {
-    padding: 20px 10px;
+    padding: 20px 20px;
     margin: 15px 10px 0;
+    width: 100%;
   }
-}
 
-li:hover, .policyHeader:hover, li a:hover, .btn:hover {
-  opacity: 0.9;
+  li:hover {
+    padding: 18px 18px;
+  }
 }
 
 li a {
@@ -124,11 +140,8 @@ li a {
 #intro {
   display: flex;
   flex-direction: column;
-}
-
-#intro p {
   max-width: 500px;
-  align-self: center;
+  margin: 0 auto;
 }
 
 #resultsHeader div {
@@ -172,31 +185,37 @@ li a {
   text-decoration: underline;
 }
 
-#myManifesto > div:hover .shares {
-  display: flex;
-}
-
-#myManifesto .shares {
-
+#myManifesto > div:hover .share-wrap {
+  display: block;
 }
 
 @media (hover: hover) {
-  .shares {
+  .share-wrap {
     display: none !important;
   }
 
-  #myManifesto > div:hover .shares {
-    display: flex !important;
+  #myManifesto > div:hover .share-wrap {
+    display: block !important;
   }
 }
 
-.shares {
+.share-wrap {
   width: 36%;
+}
+
+.share-wrap span {
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  text-align: center;
+  display: block;
+}
+
+.shares {
   font-size: 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: space-evenly;
 }
 
@@ -223,34 +242,6 @@ li a {
   text-align: center;
 }
 
-.btn {
-  background-color: slategrey;
-  border-radius: 3px;
-  padding: 10px;
-  color: whitesmoke;
-  text-align: center;
-  font-size: 2em;
-}
-
-.lab, .con, .policyHeader{
-  color: whitesmoke;
-  padding: 40px;
-  border-radius: 3px;
-  font-size: 1.4em;
-}
-
-.policyHeader {
-  background-color: slategrey;
-}
-
-.lab {
-  background-color: red;
-}
-
-.con {
-  background-color: blue;
-}
-
 @media screen and (max-width: 800px) {
   #resultsHeader {
     display: block;
@@ -259,4 +250,73 @@ li a {
 
 [role=button], .btn {
   cursor: pointer;
+}
+
+.progress {
+
+}
+
+.progress-bar {
+  display: block;
+  background: #bb2f35;
+  height: 8px;
+  transition: width .3s ease;
+  margin-bottom: 4px;
+}
+
+.progress-label {
+  color: #bb2f35;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  padding-left: 8px;
+}
+
+.restart {
+  text-align: center;
+}
+
+.restart h3 {
+  margin-bottom: 8px;
+}
+
+.restart .btn {
+  font-size: 1rem;
+}
+
+.postcode-wrap {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.postcode-wrap form {
+  display: flex;
+  flex-direction: row;
+}
+
+.postcode-wrap input {
+  font-size: 1.6rem;
+  outline: 0;
+  float: left;
+  border: 0;
+  padding: 4px 8px;
+}
+
+.postcode-wrap input[type=text] {
+  border-radius: 4px 0 0 4px;
+  width: 60%;
+  border: 2px solid #CCC;
+  border-right: 0;
+}
+
+.postcode-wrap input[type=submit] {
+  border-radius: 0 4px 4px 0;
+  width: 40%;
+  background: #2daa00;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.postcode-error {
+  color: #bb2f35;
+  margin: 8px 0 15px;
 }

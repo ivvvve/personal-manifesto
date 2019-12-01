@@ -11,31 +11,31 @@ class Share extends Component {
         const title = this.props.policy;
 
         return (
-            <div className="shares">
-                <FacebookShareButton
-                    url={`${shareUrl}?utm_source=Facebook%20Share`}
-                    quote={title}
-                    beforeOnClick={() => window.ga('send', 'event', 'Share', 'Facebook', title)}
-                >
-                    <FacebookIcon size={32} round></FacebookIcon>
-                    Share
-                </FacebookShareButton>
-                <TwitterShareButton
-                    url={`${shareUrl}?utm_source=Twitter%20Share`}
-                    title={title}
-                    beforeOnClick={() => window.ga('send', 'event', 'Share', 'Twitter', title)}
-                >
-                    <TwitterIcon size={32} round></TwitterIcon>
-                    Tweet
-                </TwitterShareButton>
-                <WhatsappShareButton
-                    url={`${shareUrl}?utm_source=WhatsApp%20Share`}
-                    title={title}
-                    beforeOnClick={() => window.ga('send', 'event', 'Share', 'Whatsapp', title)}
-                >
-                    <WhatsappIcon size={32} round></WhatsappIcon>
-                    Share
-                </WhatsappShareButton>
+            <div className="share-wrap">
+                <span>Share this policy</span>
+                <div className="shares">
+                    <FacebookShareButton
+                        url={`${shareUrl}?utm_source=Facebook%20Share`}
+                        quote={title}
+                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Facebook', title)}
+                    >
+                        <FacebookIcon size={32} round></FacebookIcon>
+                    </FacebookShareButton>
+                    <TwitterShareButton
+                        url={`${shareUrl}?utm_source=Twitter%20Share`}
+                        title={title}
+                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Twitter', title)}
+                    >
+                        <TwitterIcon size={32} round></TwitterIcon>
+                    </TwitterShareButton>
+                    <WhatsappShareButton
+                        url={`${shareUrl}?utm_source=WhatsApp%20Share`}
+                        title={title}
+                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Whatsapp', title)}
+                    >
+                        <WhatsappIcon size={32} round></WhatsappIcon>
+                    </WhatsappShareButton>
+                </div>
             </div>
         );
     }

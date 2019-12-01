@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Policy from './Policy.js';
+import Progress from './Progress.js';
 import Choices from './Choices.js';
 import data from '../data';
 
@@ -54,15 +55,21 @@ class App extends Component {
     if (this.state.pos === -1) {
       return (
         <div className="wrapper" id="intro">
-        <h1>Personal manifesto</h1>
+        <h1>Your Personal Manifesto</h1>
         <p>
           Est reprehenderit eu nisi occaecat enim reprehenderit magna. Non laborum Lorem laborum et do velit velit est ex eu velit esse cupidatat. Incididunt commodo sit culpa nulla ut proident nisi ad cillum est enim id nisi incididunt. Nisi incididunt do aliquip veniam reprehenderit eiusmod.
         </p>
-        <p className="btn" onClick={this.posUp}>Continue ↷</p>
+        <div className="btn" onClick={this.posUp}>Continue ↷</div>
       </div>
       )
     } else if (this.state.pos < this.state.policies.length) {
-      return(<Policy inc={this.addChoice} dec={this.posDown} policy={this.state.policies[this.state.pos]} pos={this.state.pos}></Policy>)
+      return(
+        <React.Fragment>
+          <Progress pos={this.state.pos} total={this.state.policies.length} />
+          <Policy inc={this.addChoice} dec={this.posDown} policy={this.state.policies[this.state.pos]} pos={this.state.pos}></Policy>
+        </React.Fragment>
+
+      )
     } else {
       return (
         <Choices rePos={this.rePos} choices={this.state.choices}></Choices>

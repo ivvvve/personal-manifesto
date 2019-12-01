@@ -100,6 +100,7 @@ module.exports = [
   },
   {
     name: "Which of these services do you rely on most?",
+    all: true,
     options: [
       {
         text: "NHS, Care",
@@ -223,7 +224,7 @@ module.exports = [
     ]
   },
   {
-    name: "Where do you live",
+    name: "Where do you live?",
     map: true,
     options: [
       {
