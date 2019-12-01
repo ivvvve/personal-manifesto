@@ -48,7 +48,7 @@ module.exports = [
               answer: "While being self-employed means you have more freedom and autonomy, it can also be insecure work. You now have better protections for your work and income alongside access to a mortgage and a pension scheme."
             }
           ]
-        } 
+        }
       },
       {
         text: "I study",
@@ -70,6 +70,7 @@ module.exports = [
   },
   {
     name: "What is your biggest immediate concern?",
+    all: true,
     options: [
       {
         text: "My job",
@@ -221,7 +222,7 @@ module.exports = [
       }
     ]
   },
-  { 
+  {
     name: "Where do you live",
     map: true,
     options: [
@@ -429,6 +430,6 @@ module.exports = [
           "XX",
         ]
       },
-    ]  
+    ]
   }
 ];

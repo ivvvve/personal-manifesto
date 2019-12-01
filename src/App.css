@@ -41,10 +41,16 @@ h1, h2, h3, p {
 }
 
 h1 {
-  grid-column: 1/5;
   text-align: center;
-  font-size: 3em
+  font-size: 8vw
 }
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
 
 h2 {
   font-size: 2em;
@@ -57,7 +63,6 @@ h3 {
 ul {
   list-style: none;
   padding: 0px;
-  grid-column: 1/5;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -66,14 +71,33 @@ ul {
 li {
   flex: 0 1 300px;
   text-align: center;
-  padding: 40px;
-  margin: 20px;
+  padding: 40px 15px;
+  margin: 20px 10px 0;
   font-family: 'Work Sans', sans-serif;
   background: wheat;
   cursor: pointer;
 }
 
-li p:hover, .policyHeader:hover, li a:hover, .btn:hover {
+li.all {
+  margin-top: 30px;
+}
+
+li.skipPolicy {
+  align-self: flex-end;
+  background: #ddd;
+  padding: 10px 15px;
+  flex: 0 1 auto;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  li {
+    padding: 20px 10px;
+    margin: 15px 10px 0;
+  }
+}
+
+li:hover, .policyHeader:hover, li a:hover, .btn:hover {
   opacity: 0.9;
 }
 
@@ -135,7 +159,7 @@ li a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 #myManifesto p {

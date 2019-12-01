@@ -18,13 +18,13 @@ class App extends Component {
     this.rePos = this.rePos.bind(this);
     this.addChoice = this.addChoice.bind(this);
   }
-  
+
   posUp() {
     if (this.state.pos < this.state.policies.length + 1) {
       this.setState({pos: this.state.pos + 1})
     }
   };
-  
+
   posDown() {
     if (this.state.pos >= 0 ){
       this.setState({ pos: this.state.pos - 1 })
@@ -40,10 +40,14 @@ class App extends Component {
   addChoice(event, answer, selection, question) {
     event.stopPropagation();
     if (answer) {
-      this.state.choices.push(answer);
+      if (Array.isArray(answer)) {
+        this.state.choices.push(...answer);
+      } else {
+        this.state.choices.push(answer);
+      }
     }
-    this.posUp();
     window.ga('send', 'event', 'Question', question, selection);
+    this.posUp();
   }
 
   render() {
