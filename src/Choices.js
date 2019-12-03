@@ -6,8 +6,8 @@ class Choices extends Component {
     render() {
         const choiceList = this.props.choices.map((c, key) =>
             <div key={key}>
-                <p>{c}</p>
                 <Share policy={c} />
+                <p>{c}</p>
             </div>);
 
         return (

@@ -1,5 +1,9 @@
+  @import url("https://use.typekit.net/rth1les.css");
+
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: neue-haas-grotesk-text,sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background-color: #ecdfd1;
   color: #313131;
   font-size: 18px;
@@ -19,16 +23,16 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Roboto Slab', serif;
-  font-weight: bold;
-  margin: 0 0 1.5rem;
+font-family: neue-haas-grotesk-text,sans-serif;
+font-weight: 500;
+font-style: normal;
 }
 
 h1 {
   text-align: center;
   font-size: 3rem;
   line-height: 1.05;
-  color: #bb2f35;
+  color: #e20613;
 }
 
 @media screen and (min-width: 600px) {
@@ -38,7 +42,7 @@ h1 {
 }
 
 .btn {
-  background-color: #2daa00;
+  background-color: #e20613;
   border-radius: 3px;
   padding: 10px 15px;
   color: #EEE;
@@ -71,7 +75,9 @@ li {
   border: 2px solid #FFF;
   padding: 38px 13px;
   margin: 20px 10px 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: neue-haas-grotesk-text,sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background: #FFF;
   cursor: pointer;
   box-sizing: border-box;
@@ -159,6 +165,7 @@ li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 #myManifesto > div {
@@ -169,6 +176,9 @@ li a {
   flex-direction: row;
   align-items: center;
   padding-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 3px;
 }
 
 #myManifesto p {
@@ -195,16 +205,19 @@ li a {
   }
 
   li:hover {
-    border: 2px solid #bb2f35;
+    border: 2px solid #e20613;
   }
 }
 
 .share-wrap {
   width: 36%;
+  margin-left: -38%;
 }
 
 .share-wrap span {
-  font-family: 'Roboto Slab', serif;
+  font-family: neue-haas-grotesk-text,sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 13px;
   padding-top: 4px;
   text-align: center;
@@ -259,16 +272,17 @@ li a {
 
 .progress-bar {
   display: block;
-  background: #bb2f35;
+  background: #e20613;
   height: 8px;
   transition: width .3s ease;
   margin-bottom: 4px;
 }
 
 .progress-label {
-  color: #bb2f35;
-  font-family: 'Roboto Slab', serif;
-  font-weight: bold;
+  color: #e20613;
+  font-family: neue-haas-grotesk-text,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   padding-left: 8px;
 }
 
@@ -315,12 +329,12 @@ li a {
 .postcode-wrap input[type=submit] {
   border-radius: 0 4px 4px 0;
   width: 40%;
-  background: #2daa00;
+  background: #e20613;
   color: #FFF;
   cursor: pointer;
 }
 
 .postcode-error {
-  color: #bb2f35;
+  color: #e20613;
   margin: 8px 0 15px;
 }
