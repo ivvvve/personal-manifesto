@@ -6,14 +6,17 @@ class Choices extends Component {
     render() {
         const choiceList = this.props.choices.map((c, key) =>
             <div key={key}>
+                <p onClick="">{c}</p>
                 <Share policy={c} />
-                <p>{c}</p>
             </div>);
 
         return (
             <div className="wrapper">
                 <h1>Your Personal Labour Manifesto</h1>
                 <div id="myManifesto">
+                    <div>
+                        <h2 id="name">Dear Name,</h2>
+                    </div>
                     { choiceList }
                 </div>
                 <div className="restart">
