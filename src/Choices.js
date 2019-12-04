@@ -4,11 +4,11 @@ import './App.css';
 
 class Choices extends Component {
     render() {
-        const choiceList = this.props.choices.map((c, key) =>
+        const choiceList = this.props.choices.map((choice, key) =>
             <div key={key}>
-                <h3>{c[1]}</h3>
-                <p onClick="">{c[0]}</p>
-                <Share policy={c} />
+                <h3>{choice.text}</h3>
+                <p>{choice.answer}</p>
+                <Share policy={choice.answer} />
             </div>);
 
         return (

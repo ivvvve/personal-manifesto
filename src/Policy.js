@@ -36,16 +36,16 @@ class Policy extends Component {
                 }
                 {!this.state.policy.map &&
                   <ul id="compareDiv">
-                      {this.state.policy.options.map((c, key) =>
-                          <li key={key} onClick={c.nest ? (e) => {this.goNest(e, c.nest)} : (e) => this.props.inc(e, c.answer, c.text, this.state.policy.name)}>
-                              {c.text}
+                      {this.state.policy.options.map((choice, key) =>
+                          <li key={key} onClick={choice.nest ? (e) => {this.goNest(e, choice.nest)} : (e) => this.props.inc(e, choice, this.state.policy.name)}>
+                              {choice.text}
                           </li>
                       )}
                   </ul>
                 }
                 {this.state.policy.all &&
                     <ul className="all-wrap">
-                        <li className="all" onClick={(e) => this.props.inc(e, this.state.policy.options.map(c => c.answer), 'all', this.state.policy.name)}>All of the above</li>
+                        <li className="all" onClick={(e) => this.props.inc(e, this.state.policy.options, this.state.policy.name)}>All of the above</li>
                     </ul>
                 }
                 {this.state.policy.map &&

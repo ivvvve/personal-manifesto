@@ -38,16 +38,17 @@ class App extends Component {
     this.setState({ pos: -1 });
   }
 
-  addChoice(event, answer, selection, question) {
+  addChoice(event, choice, question) {
     event.stopPropagation();
-    if (answer) {
-      if (Array.isArray(answer)) {
-        this.state.choices.push(...[answer, selection]);
+    if (choice) {
+      if (Array.isArray(choice)) {
+        this.state.choices.push(...choice);
+        window.ga('send', 'event', 'Question', question, 'all');
       } else {
-        this.state.choices.push([answer, selection]);
+        this.state.choices.push(choice);
+        window.ga('send', 'event', 'Question', question, choice.text);
       }
     }
-    window.ga('send', 'event', 'Question', question, selection);
     this.posUp();
   }
 
