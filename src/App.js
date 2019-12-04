@@ -6,13 +6,64 @@ import Progress from './Progress.js';
 import Choices from './Choices.js';
 import data from '../data';
 
+const getUrlParameter = (param) => {
+  param = param.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + param + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
 class App extends Component {
   constructor(props){
     super(props)
+
+    let pos = -1;
+    const choices = [];
+
+    const existing = getUrlParameter('a');
+    const name = getUrlParameter('name') || '';
+
+    if (existing) {
+      try {
+        existing.split('_').forEach(q => {
+          const [qid, aid] = q.split('-');
+          const question = data.find(d => d.qid === Number(qid));
+          if (question) {
+            const answers = [];
+
+            const flat = (question) => {
+              question.options.forEach(answer => {
+                if (answer.nest) {
+                  flat(answer.nest);
+                } else if (answer.aid) {
+                  answers.push(answer);
+                }
+              });
+            };
+
+            flat(question);
+
+            const answer = answers.find(a => a.aid === Number(aid));
+            if (answer) {
+              choices.push(Object.assign({qid: question.qid}, answer));
+            }
+          }
+        })
+
+        if (choices.length) {
+          pos = data.length;
+        }
+      } catch(e) {
+        console.error('Invalid answer string', e);
+        // Couldn't parse existing answers,
+      }
+    }
+
     this.state = {
       policies: data,
-      pos: -1,
-      choices: []
+      pos,
+      choices,
+      name
     }
     this.posUp = this.posUp.bind(this);
     this.posDown = this.posDown.bind(this);
@@ -40,7 +91,7 @@ class App extends Component {
 
   addChoice(event, choice, question) {
     event.stopPropagation();
-    if (choice) {
+    if (choice && choice.answer) {
       if (Array.isArray(choice)) {
         this.state.choices.push(...choice);
         window.ga('send', 'event', 'Question', question, 'all');
@@ -73,7 +124,7 @@ class App extends Component {
       )
     } else {
       return (
-        <Choices rePos={this.rePos} choices={this.state.choices}></Choices>
+        <Choices rePos={this.rePos} choices={this.state.choices} name={this.state.name}></Choices>
       )
     }
   }

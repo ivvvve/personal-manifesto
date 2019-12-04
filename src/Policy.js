@@ -24,33 +24,37 @@ class Policy extends Component {
     }
 
     render() {
-        if (!this.state.policy) {
+      const policy = this.state.policy;
+        if (!policy) {
             return false;
         }
 
         return (
             <div className="wrapper" id="policyWrapper">
-                <h2>{this.state.policy.name}</h2>
-                {this.state.policy.map &&
-                    <Postcode inc={this.props.inc} policy={this.state.policy} />
+                <h2>{policy.name}</h2>
+                {policy.map &&
+                    <Postcode inc={this.props.inc} policy={policy} />
                 }
-                {!this.state.policy.map &&
+                {!policy.map &&
                   <ul id="compareDiv">
-                      {this.state.policy.options.map((choice, key) =>
-                          <li key={key} onClick={choice.nest ? (e) => {this.goNest(e, choice.nest)} : (e) => this.props.inc(e, choice, this.state.policy.name)}>
+                      {policy.options.map((choice, key) =>
+                          <li key={key} onClick={choice.nest
+                              ? (e) => {this.goNest(e, choice.nest)}
+                              : (e) => this.props.inc(e, Object.assign({qid: policy.qid}, choice), policy.name)}
+                          >
                               {choice.text}
                           </li>
                       )}
                   </ul>
                 }
-                {this.state.policy.all &&
+                {policy.all &&
                     <ul className="all-wrap">
-                        <li className="all" onClick={(e) => this.props.inc(e, this.state.policy.options, this.state.policy.name)}>All of the above</li>
+                        <li className="all" onClick={(e) => this.props.inc(e, policy.options.map(choice => Object.assign({qid: policy.qid}, choice)), policy.name)}>All of the above</li>
                     </ul>
                 }
-                {this.state.policy.map &&
+                {policy.map &&
                     <ul className="skip-wrap">
-                        <li className="skipPolicy" onClick={(e) => this.props.inc(e, null, 'Skip', this.state.policy.name)}>Skip this question</li>
+                        <li className="skipPolicy" onClick={(e) => this.props.inc(e, null, 'Skip', policy.name)}>Skip this question</li>
                     </ul>
                 }
             </div>

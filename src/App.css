@@ -1,5 +1,5 @@
   @import url("https://use.typekit.net/lra2unb.css");
-  
+
 
 body {
   font-family: neue-haas-grotesk-text,sans-serif;
@@ -62,7 +62,7 @@ h3 {
 }
 
 .script {
-  grid-column: 2/4;     
+  grid-column: 2/4;
   font-family: caflisch-script-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -190,12 +190,12 @@ li a {
   padding: 10px 40px 10px 40px;
 }
 
-#myManifesto h2 { 
+#myManifesto h2 {
   font-size: 3em;
   padding: 40px 40px 10px 40px;
 }
 
-#myManifesto h3 { 
+#myManifesto h3 {
   padding: 20px 40px 20px 40px;
 }
 
@@ -351,4 +351,16 @@ li a {
 .postcode-error {
   color: #e20613;
   margin: 8px 0 15px;
+}
+
+.name-field {
+
+}
+
+.all-share-wrap {
+
+}
+
+.all-shares {
+
 }
