@@ -42,9 +42,9 @@ class App extends Component {
     event.stopPropagation();
     if (answer) {
       if (Array.isArray(answer)) {
-        this.state.choices.push(...answer);
+        this.state.choices.push(...[answer, selection]);
       } else {
-        this.state.choices.push(answer);
+        this.state.choices.push([answer, selection]);
       }
     }
     window.ga('send', 'event', 'Question', question, selection);

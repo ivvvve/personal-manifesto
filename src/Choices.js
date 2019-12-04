@@ -6,7 +6,8 @@ class Choices extends Component {
     render() {
         const choiceList = this.props.choices.map((c, key) =>
             <div key={key}>
-                <p onClick="">{c}</p>
+                <h3>{c[1]}</h3>
+                <p onClick="">{c[0]}</p>
                 <Share policy={c} />
             </div>);
 
@@ -15,14 +16,16 @@ class Choices extends Component {
                 <h1>Your Personal Labour Manifesto</h1>
                 <div id="myManifesto">
                     <div>
-                        <h2 id="name">Dear Name,</h2>
+                        <h2 class="script">Dear Name,</h2>
+                        <p>Here's what a Labour government would do for you:</p>
                     </div>
                     { choiceList }
+                    <div>
+                        <h2 class="script">Signed,</h2>
+                        <h2>The Labour Party</h2>
+                    </div>
                 </div>
-                <div className="restart">
-                    <h3>Still undecided?</h3>
-                    <div className="btn" onClick={this.props.rePos}>← Start again</div>
-                </div>
+                <h2>Share</h2>
             </div>
         )
     }
