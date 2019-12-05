@@ -343,14 +343,39 @@ li a {
   margin: 8px 0 15px;
 }
 
-.name-field {
-
+#share {
+  grid-column: 2;
 }
 
 .all-share-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
 
+.all-share-wrap h2 {
+  text-align: center;
+}
+
+.all-share-wrap p { 
+}
+
+.name-field {
+  display: flex;
+  justify-content: center;
+}
+
+.name-field input {
+  border: none;
+  border-bottom: medium solid #e20613;
+  background-color: rgba(256,256,256,0);
+  font-size: 36px;
+  max-width: 375px;
 }
 
 .all-shares {
-
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }

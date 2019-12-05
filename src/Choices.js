@@ -12,7 +12,7 @@ class Choices extends Component {
             <div key={key}>
                 <h3>{choice.text}</h3>
                 <p>{choice.answer}</p>
-                <Share policy={choice.answer} />
+                {/* <Share policy={choice.answer} /> */}
             </div>);
 
         return (
@@ -29,12 +29,12 @@ class Choices extends Component {
                         <h2>The Labour Party</h2>
                     </div>
                 </div>
-                <div className="reset">
+                {/* <div className="reset">
                     <p>Reset to get new personalised policies for you or a friend</p>
                     <a className="btn" onClick={() => this.props.rePos()}>Reset</a>
-                </div>
+                </div> */}
 
-                <div>
+                <div id="share">
                     <ShareAll policy="Here's my personal Labour Manifesto" answerString={answerString} />
                 </div>
             </div>
