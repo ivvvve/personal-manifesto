@@ -5,17 +5,34 @@ import {
 import './App.css';
 
 
-class Share extends Component {
-    render() {
-        const path = this.props.path || '';
+class ShareAll extends Component {
 
-        const shareUrl = process.env.PUBLIC_URL + '?' + path;
+    constructor(props) {
+        super(props);
+        this.state = {name: ''};
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({name: event.target.value});
+    }
+
+    render() {
+        const answerString = this.props.answerString;
+
+        const shareUrl = process.env.PUBLIC_URL + '?' + answerString + '&name=' + this.state.name;
         const title = this.props.policy;
 
         return (
-            <div className="share-wrap">
-                <span>Share this policy</span>
-                <div className="shares">
+            <div className="all-share-wrap">
+                <h2>Share this with a friend</h2>
+                <p>Instruction for sharing</p>
+                <div className="name-field">
+                    <input type="text" value={this.state.name} onChange={this.handleChange} />
+                </div>
+
+                <div className="all-shares">
                     <FacebookShareButton
                         url={`${shareUrl}&utm_source=Facebook%20Share`}
                         quote={title}
@@ -43,4 +60,4 @@ class Share extends Component {
     }
 }
 
-export default Share;
+export default ShareAll;
