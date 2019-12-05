@@ -91,16 +91,10 @@ li {
   box-sizing: border-box;
 }
 
-li:hover {
-}
-
 .all-wrap {
   grid-column: 2;
   margin-top: 15px;
   padding: 15px 0;
-}
-
-li.all {
 }
 
 .skip-wrap {
@@ -197,10 +191,6 @@ li a {
 
 #myManifesto h3 { 
   padding: 20px 40px 20px 40px;
-}
-
-#myManifesto > div:hover p {
-  /* text-decoration: underline; */
 }
 
 #myManifesto > div:hover .share-wrap {
