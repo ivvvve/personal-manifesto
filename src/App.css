@@ -1,6 +1,3 @@
-  @import url("https://use.typekit.net/lra2unb.css");
-
-
 body {
   font-family: neue-haas-grotesk-text,sans-serif;
   font-weight: 400;
@@ -370,7 +367,7 @@ li a {
   text-align: center;
 }
 
-.all-share-wrap p { 
+.all-share-wrap p {
 }
 
 .name-field {
