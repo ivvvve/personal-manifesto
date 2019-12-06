@@ -98,11 +98,19 @@ class App extends Component {
           event_category: question,
           event_label: 'all'
         });
+        window.fbq('trackCustom', 'Question', {
+          question,
+          answer: 'all'
+        });
       } else {
         this.state.choices.push(choice);
         window.gtag('event', 'Question', {
           event_category: question,
           event_label: choice.text
+        });
+        window.fbq('trackCustom', 'Question', {
+          question,
+          answer: choice.text
         });
       }
     }
