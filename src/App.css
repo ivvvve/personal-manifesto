@@ -138,6 +138,12 @@ li a {
   justify-content: space-evenly;
 }
 
+#conclude {
+  grid-column: 2;
+  max-width: 600px;
+  padding: 50px;
+}
+
 #resultsHeader {
   display: flex;
   justify-content: space-evenly;
@@ -177,11 +183,18 @@ li a {
   min-height: 150px;
 }
 
+@media (min-width: 700px) and (max-width: 1100px) {
+  #myManifesto > div {
+    grid-template-columns: 1fr 5fr 1fr
+  }
+}
+
 #myManifesto p, #myManifesto h2, #myManifesto h3 {
   background-color: white;
   grid-column: 2;
   margin: 0;
   padding: 10px 40px 10px 40px;
+  max-width: 700px;
 }
 
 #myManifesto h2 {

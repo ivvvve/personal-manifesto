@@ -18,6 +18,7 @@ class Choices extends Component {
         return (
             <div className="wrapper">
                 <h1>Your Personal Labour Manifesto</h1>
+                <p id="conclude">Based on what you've told us, we've highlighted these key Labour policies which will make a direct difference to your life. The Labour Party stands on the side of the many, not the few - share your Personal Manifesto now and show what a Labour government would do for you!</p>
                 <div id="myManifesto">
                     <div>
                         <h2 className="script">Dear {this.props.name || 'Voter'},</h2>

@@ -4,8 +4,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gatsby": "^2.18.7",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-ga": "^2.7.0",
     "react-scripts": "0.9.5",
     "react-share": "^3.0.1"
   },

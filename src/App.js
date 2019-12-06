@@ -109,7 +109,7 @@ class App extends Component {
         <div className="wrapper" id="intro">
         <h1>Your Personal Manifesto</h1>
         <p>
-          Est reprehenderit eu nisi occaecat enim reprehenderit magna. Non laborum Lorem laborum et do velit velit est ex eu velit esse cupidatat. Incididunt commodo sit culpa nulla ut proident nisi ad cillum est enim id nisi incididunt. Nisi incididunt do aliquip veniam reprehenderit eiusmod.
+          Want to find out what a Labour government would do for you and the people you care about? Simply fill out this quick quiz and we'll tell you about the key Labour policies that will make a direct difference to your life, or to the life of a friend, family member or colleague.  
         </p>
         <div className="btn" onClick={this.posUp}>Continue →</div>
       </div>

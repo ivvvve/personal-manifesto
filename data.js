@@ -73,14 +73,14 @@ module.exports = [
                   }
                 ]
               }
-            },
-            {
-              text: "Self-employed",
-              aid: 13,
-              answer: "While being self-employed means you have more freedom and autonomy, it can also be insecure work. You now have better protections for your work and income alongside access to a mortgage and a pension scheme."
             }
           ]
         }
+      },
+      {
+        text: "Self-employed",
+        aid: 13,
+        answer: "While being self-employed means you have more freedom and autonomy, it can also be insecure work. You now have better protections for your work and income alongside access to a mortgage and a pension scheme."
       },
       {
         text: "I study",
