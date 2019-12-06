@@ -17,21 +17,21 @@ class Share extends Component {
                     <FacebookShareButton
                         url={`${shareUrl}?utm_source=Facebook%20Share`}
                         quote={title}
-                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Facebook', title)}
+                        beforeOnClick={() => window.gtm('event', 'Share', {event_category: 'Facebook', event_label: title})}
                     >
                         <FacebookIcon size={30} round></FacebookIcon>
                     </FacebookShareButton>
                     <TwitterShareButton
                         url={`${shareUrl}?utm_source=Twitter%20Share`}
                         title={title}
-                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Twitter', title)}
+                        beforeOnClick={() => window.gtm('event', 'Share', {event_category: 'Twitter', event_label: title})}
                     >
                         <TwitterIcon size={30} round></TwitterIcon>
                     </TwitterShareButton>
                     <WhatsappShareButton
                         url={`${shareUrl}?utm_source=WhatsApp%20Share`}
                         title={title}
-                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Whatsapp', title)}
+                        beforeOnClick={() => window.gtm('event', 'Share', {event_category: 'Whatsapp', event_label: title})}
                     >
                         <WhatsappIcon size={30} round></WhatsappIcon>
                     </WhatsappShareButton>

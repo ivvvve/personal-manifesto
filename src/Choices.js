@@ -35,7 +35,7 @@ class Choices extends Component {
                 </div> */}
 
                 <div id="share">
-                    <ShareAll policy="Here's my personal Labour Manifesto" answerString={answerString} />
+                    <ShareAll message="Here's my personal Labour Manifesto" answerString={answerString} />
                 </div>
             </div>
         )

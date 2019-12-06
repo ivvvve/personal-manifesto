@@ -22,7 +22,7 @@ class ShareAll extends Component {
         const answerString = this.props.answerString;
 
         const shareUrl = process.env.PUBLIC_URL + '?' + answerString + '&name=' + this.state.name;
-        const title = this.props.policy;
+        const title = this.props.message;
 
         return (
             <div className="all-share-wrap">
@@ -36,21 +36,21 @@ class ShareAll extends Component {
                     <FacebookShareButton
                         url={`${shareUrl}&utm_source=Facebook%20Share`}
                         quote={title}
-                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Facebook', title)}
+                        beforeOnClick={() => window.gtm('event', 'Share', {event_category: 'Facebook', event_label: title})}
                     >
                         <FacebookIcon size={50} round></FacebookIcon>
                     </FacebookShareButton>
                     <TwitterShareButton
                         url={`${shareUrl}&utm_source=Twitter%20Share`}
                         title={title}
-                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Twitter', title)}
+                        beforeOnClick={() => window.gtm('event', 'Share', {event_category: 'Twitter', event_label: title})}
                     >
                         <TwitterIcon size={50} round></TwitterIcon>
                     </TwitterShareButton>
                     <WhatsappShareButton
                         url={`${shareUrl}&utm_source=WhatsApp%20Share`}
                         title={title}
-                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Whatsapp', title)}
+                        beforeOnClick={() => window.gtm('event', 'Share', {event_category: 'Whatsapp', event_label: title})}
                     >
                         <WhatsappIcon size={50} round></WhatsappIcon>
                     </WhatsappShareButton>
