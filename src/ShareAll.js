@@ -36,21 +36,21 @@ class ShareAll extends Component {
                     <FacebookShareButton
                         url={`${shareUrl}&utm_source=Facebook%20Share`}
                         quote={title}
-                        beforeOnClick={() => window.gtm('event', 'share', {method: 'Facebook', event_label: title})}
+                        beforeOnClick={() => window.gtag('event', 'share', {method: 'Facebook', event_label: title})}
                     >
                         <FacebookIcon size={50} round></FacebookIcon>
                     </FacebookShareButton>
                     <TwitterShareButton
                         url={`${shareUrl}&utm_source=Twitter%20Share`}
                         title={title}
-                        beforeOnClick={() => window.gtm('event', 'share', {method: 'Twitter', event_label: title})}
+                        beforeOnClick={() => window.gtag('event', 'share', {method: 'Twitter', event_label: title})}
                     >
                         <TwitterIcon size={50} round></TwitterIcon>
                     </TwitterShareButton>
                     <WhatsappShareButton
                         url={`${shareUrl}&utm_source=WhatsApp%20Share`}
                         title={title}
-                        beforeOnClick={() => window.gtm('event', 'share', {method: 'Whatsapp', event_label: title})}
+                        beforeOnClick={() => window.gtag('event', 'share', {method: 'Whatsapp', event_label: title})}
                     >
                         <WhatsappIcon size={50} round></WhatsappIcon>
                     </WhatsappShareButton>
