@@ -94,10 +94,16 @@ class App extends Component {
     if (choice && choice.answer) {
       if (Array.isArray(choice)) {
         this.state.choices.push(...choice);
-        window.ga('send', 'event', 'Question', question, 'all');
+        window.gtm('event', 'Question', {
+          event_category: question, 
+          event_label: 'all'
+        });
       } else {
         this.state.choices.push(choice);
-        window.ga('send', 'event', 'Question', question, choice.text);
+        window.gtm('event', 'Question', {
+          event_category: question, 
+          event_label: choice.text
+        });
       }
     }
     this.posUp();
