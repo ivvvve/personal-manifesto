@@ -94,12 +94,6 @@ class App extends Component {
     if (choice && choice.answer) {
       if (Array.isArray(choice)) {
         this.state.choices.push(...choice);
-<<<<<<< HEAD
-        window.gtag('event', {'event_category': 'Choice', 'event_label': question, 'value': 'all'});
-      } else {
-        this.state.choices.push(choice);
-        window.gtag('event', {'event_category': 'Choice', 'event_label': question, 'value': choice.text});
-=======
         window.gtag('event', 'Question', {
           event_category: question,
           event_label: 'all'
@@ -110,7 +104,6 @@ class App extends Component {
           event_category: question,
           event_label: choice.text
         });
->>>>>>> 1f6751abb35671e26dee7d1e85391549489d276f
       }
     }
     this.posUp();
