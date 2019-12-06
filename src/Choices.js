@@ -12,7 +12,7 @@ class Choices extends Component {
             <div key={key}>
                 <h3>{choice.text}</h3>
                 <p>{choice.answer}</p>
-                {/* <Share policy={choice.answer} /> */}
+                <Share policy={choice.answer} />
             </div>);
 
         return (
