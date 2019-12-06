@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/lra2unb.css");
+
 body {
   font-family: neue-haas-grotesk-text,sans-serif;
   font-weight: 400;
@@ -373,6 +375,7 @@ li a {
 .name-field {
   display: flex;
   justify-content: center;
+  font-size: 36px;
 }
 
 .name-field input {
@@ -380,6 +383,7 @@ li a {
   border-bottom: medium solid #e20613;
   background-color: rgba(256,256,256,0);
   font-size: 36px;
+  margin-left: 8px;
   max-width: 375px;
 }
 

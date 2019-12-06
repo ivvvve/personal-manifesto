@@ -29,7 +29,8 @@ class ShareAll extends Component {
                 <h2>Share this with a friend</h2>
                 <p>Instruction for sharing</p>
                 <div className="name-field">
-                    <input type="text" value={this.state.name} onChange={this.handleChange} />
+                    <span className="script">Dear: </span>
+                    <input className="script" type="text" value={this.state.name} onChange={this.handleChange} />
                 </div>
 
                 <div className="all-shares">
