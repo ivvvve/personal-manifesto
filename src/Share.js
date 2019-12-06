@@ -7,9 +7,7 @@ import './App.css';
 
 class Share extends Component {
     render() {
-        const path = this.props.path || '';
-
-        const shareUrl = process.env.PUBLIC_URL + '?' + path;
+        const shareUrl = process.env.PUBLIC_URL;
         const title = this.props.policy;
 
         return (
@@ -17,23 +15,23 @@ class Share extends Component {
                 <span>Share this policy</span>
                 <div className="shares">
                     <FacebookShareButton
-                        url={`${shareUrl}&utm_source=Facebook%20Share`}
+                        url={`${shareUrl}?utm_source=Facebook%20Share`}
                         quote={title}
-                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Facebook', title)}
+                        beforeOnClick={() => window.gtag('event', 'share', {method: 'Facebook', event_label: title})}
                     >
                         <FacebookIcon size={30} round></FacebookIcon>
                     </FacebookShareButton>
                     <TwitterShareButton
-                        url={`${shareUrl}&utm_source=Twitter%20Share`}
+                        url={`${shareUrl}?utm_source=Twitter%20Share`}
                         title={title}
-                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Twitter', title)}
+                        beforeOnClick={() => window.gtag('event', 'share', {method: 'Twitter', event_label: title})}
                     >
                         <TwitterIcon size={30} round></TwitterIcon>
                     </TwitterShareButton>
                     <WhatsappShareButton
-                        url={`${shareUrl}&utm_source=WhatsApp%20Share`}
+                        url={`${shareUrl}?utm_source=WhatsApp%20Share`}
                         title={title}
-                        beforeOnClick={() => window.ga('send', 'event', 'Share', 'Whatsapp', title)}
+                        beforeOnClick={() => window.gtag('event', 'share', {method: 'Whatsapp', event_label: title})}
                     >
                         <WhatsappIcon size={30} round></WhatsappIcon>
                     </WhatsappShareButton>
