@@ -25,10 +25,10 @@ function Postcode({policy, inc}) {
 
   return (
     <div className="postcode-wrap">
-      <h3>Enter the first half postcode to find local policies:</h3>
+      <h3>Enter the first half of your postcode:</h3>
       <form onSubmit={lookup}>
         <input type="text" name="postcode" />
-        <input type="submit" value="Search"/>
+        <input type="submit" value="SHOW ME MY MANIFESTO"/>
       </form>
       {error &&
         <p className="postcode-error">{error}</p>

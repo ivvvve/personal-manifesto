@@ -121,11 +121,26 @@ class App extends Component {
     if (this.state.pos === -1) {
       return (
         <div className="wrapper" id="intro">
-        <h1>Your Personal Manifesto</h1>
+          <div id="header">
+            <h1>YOUR</h1>
+            <h1>PERSONAL</h1>
+            <h1>MANIFESTO</h1>
+          </div>
         <p>
           Want to find out what a Labour government would do for you and the people you care about? Simply fill out this quick quiz and we'll tell you about the key Labour policies that will make a direct difference to your life, or to the life of a friend, family member or colleague.
         </p>
-        <div className="btn" onClick={this.posUp}>Continue →</div>
+        <div className="btn" onClick={this.posUp}><p>LET'S GO!</p></div>
+        <div id="gifWrap">
+          <img src="./img/brexit.gif" alt=""></img>          
+          <img src="./img/econ.gif" alt=""></img>
+          <img src="./img/edu.gif" alt=""></img>
+          <img src="./img/gir.gif" alt=""></img>
+          <img src="./img/hous.gif" alt=""></img>
+          <img src="./img/i14m.gif" alt=""></img>
+          <img src="./img/nhs.gif" alt=""></img>
+          <img src="./img/public.gif" alt=""></img>
+          <img src="./img/work.gif" alt=""></img>
+        </div>
       </div>
       )
     } else if (this.state.pos < this.state.policies.length) {

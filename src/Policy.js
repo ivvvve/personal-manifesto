@@ -23,6 +23,12 @@ class Policy extends Component {
         this.setState({policy});
     }
 
+    hasAll(obj) {
+        if(obj.all) {
+            return <li className="choice" onClick={(e) => this.props.inc(e, obj.options.map(choice => Object.assign({ qid: obj.qid }, choice)), obj.name)}>All of the above</li>
+        }
+    }
+
     render() {
       const policy = this.state.policy;
         if (!policy) {
@@ -31,31 +37,26 @@ class Policy extends Component {
 
         return (
             <div className="wrapper" id="policyWrapper">
-                <h2>{policy.name}</h2>
+                <p className="secondaryBtn" onClick={this.props.dec}>Go back</p>
+                <h1>{policy.name}</h1>
                 {policy.map &&
                     <Postcode inc={this.props.inc} policy={policy} />
                 }
                 {!policy.map &&
-                  <ul id="compareDiv">
+                  <ul>
                       {policy.options.map((choice, key) =>
-                          <li key={key} onClick={choice.nest
+                          <li className="choice" key={key} onClick={choice.nest
                               ? (e) => {this.goNest(e, choice.nest)}
                               : (e) => this.props.inc(e, Object.assign({qid: policy.qid}, choice), policy.name)}
                           >
                               {choice.text}
                           </li>
                       )}
+                      {this.hasAll(policy)}
                   </ul>
                 }
-                {policy.all &&
-                    <ul className="all-wrap">
-                        <li className="all" onClick={(e) => this.props.inc(e, policy.options.map(choice => Object.assign({qid: policy.qid}, choice)), policy.name)}>All of the above</li>
-                    </ul>
-                }
                 {policy.map &&
-                    <ul className="skip-wrap">
-                        <li className="skipPolicy" onClick={(e) => this.props.inc(e, null, 'Skip', policy.name)}>Skip this question</li>
-                    </ul>
+                    <p id="skipBtn" className="secondaryBtn" onClick={(e) => this.props.inc(e, null, 'Skip', policy.name)}>Skip this step</p>
                 }
             </div>
         );

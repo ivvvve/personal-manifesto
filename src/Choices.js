@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Share from './Share.js';
 import ShareAll from './ShareAll.js';
 import './App.css';
 
@@ -10,35 +9,38 @@ class Choices extends Component {
 
         const choiceList = this.props.choices.map((choice, key) =>
             <div key={key}>
-                <h3>{choice.text}</h3>
+                <h2>{choice.text}</h2>
                 <p>{choice.answer}</p>
-                <Share policy={choice.answer} />
+                {/* <Share policy={choice.answer} /> */}
             </div>);
 
         return (
+            <React.Fragment>
+
             <div className="wrapper">
-                <h1>Your Personal Labour Manifesto</h1>
-                <p id="conclude">Based on what you've told us, we've highlighted these key Labour policies which will make a direct difference to your life. The Labour Party stands on the side of the many, not the few - share your Personal Manifesto now and show what a Labour government would do for you!</p>
-                <div id="myManifesto">
+                <div id="concludeHed">
                     <div>
-                        <h2 className="script">Dear {this.props.name || 'Voter'},</h2>
-                        <p>Here's what a Labour government would do for you:</p>
-                    </div>
-                    { choiceList }
-                    <div>
-                        <h2 className="script">Signed,</h2>
-                        <h2>The Labour Party</h2>
+                        <h1>Your</h1> 
+                        <h1>Personal</h1>
+                        <h1>Labour</h1>
+                        <h1>Manifesto</h1>
                     </div>
                 </div>
-                {/* <div className="reset">
-                    <p>Reset to get new personalised policies for you or a friend</p>
-                    <a className="btn" onClick={() => this.props.rePos()}>Reset</a>
-                </div> */}
-
-                <div id="share">
-                    <ShareAll message="Here's my personal Labour Manifesto" answerString={answerString} />
+                <div id="concludeBody">
+                    <h3>Dear voter,</h3>
+                    <h3>Based on what you've told us, we've highlighted these key Labour policies which will make a direct difference to your life.</h3>
+                    <div id="myManifesto">
+                        {/* <div>
+                            <h2 className="script">Dear {this.props.name || 'Voter'},</h2>
+                        </div> */}
+                        { choiceList }
+                    </div>
+                    <div id="imgRow">
+                    </div>
                 </div>
             </div>
+            <ShareAll message="Here's my personal Labour Manifesto" answerString={answerString} />
+            </React.Fragment>
         )
     }
 }

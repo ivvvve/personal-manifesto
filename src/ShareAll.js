@@ -3,6 +3,7 @@ import {
     FacebookShareButton, TwitterShareButton, WhatsappShareButton, FacebookIcon, TwitterIcon, WhatsappIcon
 } from 'react-share';
 import './App.css';
+import { white } from 'color-name';
 
 
 class ShareAll extends Component {
@@ -25,35 +26,30 @@ class ShareAll extends Component {
         const title = this.props.message;
 
         return (
-            <div className="all-share-wrap">
-                <h2>Share this with a friend</h2>
-                <p>Instruction for sharing</p>
-                <div className="name-field">
-                    <span className="script">Dear: </span>
-                    <input className="script" type="text" value={this.state.name} onChange={this.handleChange} />
-                </div>
+            <div id="concludeFooter">
+                <h3>Share your Personal Manifesto now and show your friends and family what a Labour government would do for you!</h3>
 
-                <div className="all-shares">
+                <div>
                     <FacebookShareButton
                         url={`${shareUrl}&utm_source=Facebook%20Share`}
                         quote={title}
                         beforeOnClick={() => window.gtag('event', 'share', {method: 'Facebook', event_label: title})}
                     >
-                        <FacebookIcon size={50} round></FacebookIcon>
+                        <FacebookIcon size={50} borderRadius={10}></FacebookIcon>
                     </FacebookShareButton>
                     <TwitterShareButton
                         url={`${shareUrl}&utm_source=Twitter%20Share`}
                         title={title}
                         beforeOnClick={() => window.gtag('event', 'share', {method: 'Twitter', event_label: title})}
                     >
-                        <TwitterIcon size={50} round></TwitterIcon>
+                        <TwitterIcon size={50} borderRadius={10}></TwitterIcon>
                     </TwitterShareButton>
                     <WhatsappShareButton
                         url={`${shareUrl}&utm_source=WhatsApp%20Share`}
                         title={title}
                         beforeOnClick={() => window.gtag('event', 'share', {method: 'Whatsapp', event_label: title})}
                     >
-                        <WhatsappIcon size={50} round></WhatsappIcon>
+                        <WhatsappIcon size={50} borderRadius={10}></WhatsappIcon>
                     </WhatsappShareButton>
                 </div>
             </div>

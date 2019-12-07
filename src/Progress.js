@@ -7,8 +7,9 @@ function Progress({pos, total}) {
     return (
         <div className="progress">
             <div className="progress-bar" style={style} />
+            <div className="progress-bg" />
             <div className="progress-label">
-                Question {pos + 1} of {total}
+                {pos + 1} OF {total}
             </div>
         </div>
     );
