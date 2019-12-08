@@ -180,7 +180,7 @@ li a {
   font-family: neue-haas-grotesk-text, serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 22px;
   /* or 111% */
   letter-spacing: -0.01em;
@@ -288,14 +288,15 @@ ul {
 }
 
 
-li:hover {
-  color: black;
-  border-color: black;
-}
 
 @media (min-width: 930px) {
   ul {
     justify-content: start;
+  }
+  
+  li:hover {
+    color: black;
+    border-color: black;
   }
 
   .choice {
