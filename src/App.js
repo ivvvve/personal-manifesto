@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDom from 'react-dom';
 
 import './App.css';
 import Policy from './Policy.js';
@@ -71,6 +72,16 @@ class App extends Component {
     this.addChoice = this.addChoice.bind(this);
   }
 
+  componentDidMount = () => this.handleScroll()
+
+  componentDidUpdate = () => this.handleScroll()
+
+  handleScroll = () => {
+    setTimeout(() => {
+      ReactDom.findDOMNode(this).scrollIntoView({behaviour: 'smooth'});
+    }, 50);
+  }
+
   posUp() {
     if (this.state.pos < this.state.policies.length + 1) {
       this.setState({pos: this.state.pos + 1})
@@ -131,7 +142,7 @@ class App extends Component {
         </p>
         <div className="btn choice" onClick={this.posUp}><p>LET'S GO!</p></div>
         <div id="gifWrap">
-          <img src="./img/brexit.gif" alt=""></img>          
+          <img src="./img/brexit.gif" alt=""></img>
           <img src="./img/econ.gif" alt=""></img>
           <img src="./img/edu.gif" alt=""></img>
           <img src="./img/gir.gif" alt=""></img>
