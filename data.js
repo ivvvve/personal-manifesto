@@ -26,25 +26,30 @@ module.exports = [
               answer: "Transport is an essential service that should be run by and for the public, rather than greedy corporations. Labour's plans to bring rail and many bus services back into public ownership will secure democratic control of these services, ensuring safe staffing levels and ending the race to the bottom in working conditions for transport workers."
             },
             {
-              text: "Technology and communications",
+              text: "Technology",
               aid: 4,
               answer: "As we become ever more dependent on digital technology, Labour will deliver full-fibre broadband free to every home and business in the UK, and ensuring that every community and industry can maximise connectivity. Labour will also overhaul our cybersecurity by creating a coordinating minister and regular reviews of cyber-readiness. "
             },
             {
-              text: "Service sector",
+              text: "Communications",
               aid: 5,
+              answer: "As we become ever more dependent on digital technology, Labour will deliver full-fibre broadband free to every home and business in the UK, and ensuring that every community and industry can maximise connectivity. Labour will also overhaul our cybersecurity by creating a coordinating minister and regular reviews of cyber-readiness. "
+            },
+            {
+              text: "Service sector",
+              aid: 6,
               answer: "Working in the service sector the pay often isn't enough to pay the rent, and you might not even know your shift from week to week. Labour will ban zero-hour contracts, bring in a £10 Real Living Wage for all workers and expand union rights, making work better paid and more secure."
             },
             {
               text: "Business",
-              aid: 6,
+              aid: 7,
               answer: "Labour will create a National Investment Bank, backed up by a network of Regional Development Banks, to provide £250 billion of lending for enterprise, infrastructure and innovation over 10 years. Labour will also level the tax playing field by making sure that multi-national corporations pay their fair share so that smaller and medium-sized business are not disadvantaged."
             },
             {
               text: "Public sector",
               nest: {
                 name: "Where in the public sector do you work?",
-                qid: 7,
+                qid: 3,
                 options: [
                   {
                     text: "Healthcare",
@@ -107,7 +112,7 @@ module.exports = [
   {
     name: "What is your biggest immediate concern?",
     all: true,
-    qid: 2,
+    qid: 4,
     options: [
       {
         text: "My job",
@@ -154,7 +159,7 @@ module.exports = [
   {
     name: "Which of these services do you rely on most?",
     all: true,
-    qid: 3,
+    qid: 5,
     options: [
       {
         text: "NHS, Care",
@@ -162,7 +167,7 @@ module.exports = [
         answer: "Labour's huge NHS investment plan will give patients the qualty care they deserve. On top of this, a joined-up community care model will ensure that health and care become more accessible, more personal and more preventative."
       },
       {
-        text: "Transport (rail, tube, bus..)",
+        text: "Public transport",
         aid: 2,
         answer: "Under Labour, renationalised rail and bus services would offer better quality service for lower fares, including free bus travel for under-25s."
       },
@@ -177,15 +182,25 @@ module.exports = [
         answer: "You shouldn't be part of the internet postcode lottery. Labour will ensure free, high-speed broadband reaches every household in Britain."
       },
       {
-        text: "Community centres, youth centres, libraries",
+        text: "Community centres",
         aid: 5,
         answer: "After years of cuts and closures, a Labour government will fund community centres, giving you the accessible social infrastructure your community deserves."
+      },
+      {
+        text: "Youth centres",
+        aid: 6,
+        answer: "After years of cuts and closures, a Labour government will fund youth centres, giving you the accessible social infrastructure your community deserves."
+      }, 
+      {
+        text: "Libraries",
+        aid: 7,
+        answer: "After years of cuts and closures, a Labour government will fund libraries, giving you the accessible social infrastructure your community deserves."
       }
     ]
   },
   {
     name: "What do you like to do in your spare time?",
-    qid: 4,
+    qid: 6,
     options: [
       {
         text: "Football",
@@ -208,7 +223,7 @@ module.exports = [
         answer: "You can relax with friends in the pub, and if it is under threat a community group will have the first chance to buy it."
       },
       {
-        text: "Time in nature and green spaces",
+        text: "Spending time in nature",
         aid: 5,
         answer: "Labour will make sure we live in a country where nature is protected, wildlife is preserved, and economic wellbeing for all doesn't cost the earth."
       },
@@ -216,7 +231,7 @@ module.exports = [
   },
   {
     name: "If you have children, how old are they?",
-    qid: 6,
+    qid: 7,
     options: [
       {
         text: "No children",
@@ -240,7 +255,7 @@ module.exports = [
   },
   {
     name: "How much do you earn?",
-    qid: 7,
+    qid: 8,
     options: [
       {
         text: "I'm on benefits",
@@ -272,7 +287,7 @@ module.exports = [
 {
     name: "Where do you live?",
     map: true,
-    qid: 8,
+    qid: 9,
     options: [
       {
         text: "East of England",
