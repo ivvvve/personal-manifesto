@@ -35,21 +35,21 @@ class ShareAll extends Component {
                         quote={title}
                         beforeOnClick={() => window.gtag('event', 'share', {method: 'Facebook', event_label: title})}
                     >
-                        <FacebookIcon size={50} borderRadius={10}></FacebookIcon>
+                        <FacebookIcon size={40} borderRadius={40}></FacebookIcon>
                     </FacebookShareButton>
                     <TwitterShareButton
                         url={`${shareUrl}&utm_source=Twitter%20Share`}
                         title={title}
                         beforeOnClick={() => window.gtag('event', 'share', {method: 'Twitter', event_label: title})}
                     >
-                        <TwitterIcon size={50} borderRadius={10}></TwitterIcon>
+                        <TwitterIcon size={40} borderRadius={40}></TwitterIcon>
                     </TwitterShareButton>
                     <WhatsappShareButton
                         url={`${shareUrl}&utm_source=WhatsApp%20Share`}
                         title={title}
                         beforeOnClick={() => window.gtag('event', 'share', {method: 'Whatsapp', event_label: title})}
                     >
-                        <WhatsappIcon size={50} borderRadius={10}></WhatsappIcon>
+                        <WhatsappIcon size={40} borderRadius={40}></WhatsappIcon>
                     </WhatsappShareButton>
                 </div>
             </div>

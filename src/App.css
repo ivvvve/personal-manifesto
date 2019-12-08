@@ -201,11 +201,13 @@ li a {
 @media (min-width: 930px) {
   #intro {
     max-width: 20000px;
-    padding: 20px 30px 60px 30px;
+    padding: 60px 60px;
+    margin-top: 30px;
   }
 
   #header {
-    width: 500px;
+    width: auto;
+    justify-self: center;
   }
 
   #intro #header h1:nth-of-type(2) {
@@ -226,7 +228,8 @@ li a {
     height: 100px;
     background: #e20613;
     color: white;
-    width: 100%;
+    width: 50%;
+    justify-self: center;
   }
 
   #intro>.btn:hover {
@@ -239,6 +242,7 @@ li a {
     grid-column: 2/4;
     grid-row: 1/4;
     margin-top: 0px;
+    padding: 30px;
   }
 }
 
@@ -423,7 +427,7 @@ li:hover {
 }
 
 #concludeFooter {
-  padding: 20px;
+  padding: 10px;
   grid-column: 1/4;
   display: grid;
   grid-template-columns: subgrid;
@@ -441,12 +445,10 @@ li:hover {
   line-height: 100%;
 }
 
-#concludeFooter div {
+#concludeFooter>div {
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  margin-right: 5px;
-  position: sticky
+  justify-content: space-evenly;
 }
 
 .social-icon {
@@ -467,7 +469,7 @@ li:hover {
 @media (min-width: 930px) {
 
   #concludeWrapper {
-    grid-template-columns: 1fr 470px 1fr;
+    grid-template-columns: 1fr 600px 1fr;
   }
   #concludeHed {
     grid-template-columns: subgrid;
@@ -487,10 +489,17 @@ li:hover {
   }
 
   #concludeFooter {
-    grid-template-columns: 1fr 470px 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    padding: 0px;
   }
 
-  #concludeFooter>* {
+  #concludeFooter>h3 {
     grid-column: 2;
+  }
+
+  #concludeFooter>div {
+    grid-column: 3;
+    align-items: center;
+
   }
 }
