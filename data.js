@@ -2,7 +2,7 @@ module.exports = [
 
   {
     name: "What do you do for a living?",
-    qid: 1,
+    qid: 2,
     options: [
       {
         text: "I'm an employee",
@@ -49,7 +49,7 @@ module.exports = [
               text: "Public sector",
               nest: {
                 name: "Where in the public sector do you work?",
-                qid: 3,
+                qid: 2,
                 options: [
                   {
                     text: "Healthcare",
@@ -112,7 +112,7 @@ module.exports = [
   {
     name: "What is your biggest immediate concern?",
     all: true,
-    qid: 4,
+    qid: 3,
     options: [
       {
         text: "My job",
@@ -159,7 +159,7 @@ module.exports = [
   {
     name: "Which of these services do you rely on most?",
     all: true,
-    qid: 5,
+    qid: 4,
     options: [
       {
         text: "NHS, Care",
@@ -200,9 +200,9 @@ module.exports = [
   },
   {
     name: "What do you like to do in your spare time?",
-    qid: 6,
+    qid: 5,
     options: [
-      {
+    {
         text: "Football",
         aid: 1,
         answer: "Labour will ensure that accredited football supporters' trusts have more say over their clubs, review the state of the game to create greater equality and distribute a share of Premiership television rights income to grassroots football facilities."
@@ -231,7 +231,7 @@ module.exports = [
   },
   {
     name: "If you have children, how old are they?",
-    qid: 7,
+    qid: 6,
     options: [
       {
         text: "No children",
@@ -255,7 +255,7 @@ module.exports = [
   },
   {
     name: "How much do you earn?",
-    qid: 8,
+    qid: 7,
     options: [
       {
         text: "I'm on benefits",
@@ -284,225 +284,69 @@ module.exports = [
       }
     ]
   },
-{
+  {
     name: "Where do you live?",
-    map: true,
-    qid: 9,
+    qid: 1,
     options: [
       {
         text: "East of England",
         aid: 1,
-        answer: "Something about East of England",
-        districts: [
-          "PE",
-          "AL",
-          "CB",
-          "CM",
-          "CO",
-          "HP",
-          "IP",
-          "LU",
-          "NR",
-          "SG",
-          "SS",
-        ]
+        answer: "Labour will build 16,000 new council houses in East of England and invest heavily in wind energy and electric vehicles manufacturing in the region. The Real Living Wage will immediately benefit 667,000 workers in your region.",
       },
       {
         text: "East Midlands",
         aid: 2,
-        answer: "Something about East Midlands",
-        districts: [
-          'DE',
-          'DN',
-          'LE',
-          'LN',
-          'NG',
-          'S',
-        ]
+        answer: "Labour's Green Industrial Revolution in the East Midlands will create electric vehicle manufacturing as well as plastic and steel recycling plants in your region along with 60,000 new, high-skilled, green jobs with training schemes.",
       },
       {
         text: "London",
         aid: 3,
-        answer: "Something about London",
-        districts: [
-          "BR",
-          "CR",
-          "DA",
-          "E",
-          "EC",
-          "EN",
-          "HA",
-          "IG",
-          "KT",
-          "N",
-          "NW",
-          "RM",
-          "SE",
-          "SM",
-          "SW",
-          "TW",
-          "UB",
-          "W",
-          "WC",
-          "WD",
-        ]
+        answer: "Labour will tackle air pollution and the housing crisis in London by heavily investing in electric mobility and building 35,000 new council houses in the next four years.",
       },
       {
         text: "North East",
         aid: 4,
-        answer: "Something about North East",
-        districts: [
-          "DH",
-          "DL",
-          "NE",
-          "SR",
-          "TS",
-        ]
+        answer: "£13 billion of Labour's Green Transformation Fund will go to the North East, making sure that the Crossrail for the North is built and creating new green manufacturing works across the region.",
       },
       {
         text: "North West",
         aid: 5,
-        answer: "Something about North West",
-        districts: [
-          "BB",
-          "BD",
-          "BL",
-          "CA",
-          "CH",
-          "CW",
-          "FY",
-          "HD",
-          "HX",
-          "L",
-          "LA",
-          "M",
-          "OL",
-          "PR",
-          "SK",
-          "WA",
-          "WN",
-        ]
+        answer: "Labour's Green Industrial Revolution will generate £16 billion in investment in the North West, including Crossrail for the North, a steel recycling plant in Workington and green manufacturing. Your region will see 110,000 new, well-paid, green jobs and 18,000 new social and council homes by the end of the first parliament.",
       },
       {
         text: "Northern Ireland",
         aid: 6,
-        answer: "Something about Northern Ireland",
-        districts: [
-          "BT",
-        ]
+        answer: "Labour will stop the return of a hard border to the island of Ireland and make sure that Brexit will not threaten the territorial integrity of the United Kingdom.",
       },
       {
         text: "Scotland",
         aid: 7,
-        answer: "Something about Scotland",
-        districts: [
-          "AB",
-          "DD",
-          "DG",
-          "EH",
-          "FK",
-          "G",
-          "HS",
-          "IV",
-          "KA",
-          "KW",
-          "KY",
-          "ML",
-          "PA",
-          "PH",
-          "TD",
-          "ZE",
-        ]
+        answer: "Labour will build 120,000 new council and social homes in Scotland and properly fund NHS Scotland.",
       },
       {
         text: "South East",
         aid: 8,
-        answer: "Something about South East",
-        districts: [
-          "BN",
-          "CT",
-          "GU",
-          "ME",
-          "MK",
-          "OX",
-          "PO",
-          "RG",
-          "RH",
-          "SL",
-          "SO",
-          "TN",
-        ]
+        answer: "Labour will invest £19 billion from the Green Transformation Fund in the South East, expanding Southampton Port and building on-shore and off-shore wind power. This will create 110,000 new well-paid green jobs in your region. Nearly a million workers will get a pay raise from the Real Living Wage.",
       },
       {
         text: "South West",
         aid: 9,
-        answer: "Something about South West",
-        districts: [
-          "BA",
-          "BH",
-          "BS",
-          "DT",
-          "EX",
-          "GL",
-          "PL",
-          "SN",
-          "SP",
-          "TA",
-          "TQ",
-          "TR",
-        ]
+        answer: "Labour will create a gigafactory in Swindon to replace the closing Honda factory, make tidal stream energy investments and build 20,000 new council houses in the South West.",
       },
       {
         text: "Wales",
         aid: 10,
-        answer: "Something about Wales",
-        districts: [
-          "CF",
-          "LD",
-          "LL",
-          "NP",
-          "SA",
-          "SY",
-        ]
+        answer: "Labour will put in place the biggest-ever investment in new education, promote the Welsh language and put renewable energy and well-paid, green jobs at the heart of the Welsh economy.",
       },
       {
         text: "West Midlands",
         aid: 11,
-        answer: "Something about West Midlands",
-        districts: [
-          "B",
-          "CV",
-          "DY",
-          "HR",
-          "NN",
-          "ST",
-          "TF",
-          "WR",
-          "WS",
-          "WV",
-        ]
+        answer: "With £11 billion in new investment from Labour's Green Transformation Fund, the West Midlands will see a new gigafactory in Stoke, a metals reprocessing plant and electric vehicles manufacturing that protects 62,000 jobs.",
       },
       {
-        text: "Yorkshire and the Humber",
+        text: "Yorkshire and The Humber",
         aid: 12,
-        answer: "Something about Yorkshire and the Humber",
-        districts: [
-          "HG",
-          "HU",
-          "LS",
-          "WF",
-          "YO",
-        ]
-      },
-      {
-        text: "Other", // Non geographic postcodes (BF etc)
-        districts: [
-          "BF",
-          "BX",
-          "GIR",
-          "QC",
-          "XX",
-        ]
+        answer: "Labour will invest heavily in green technology in Yorkshire and the Humber via its Green Transformation Fund, enabling hydrogen production and transport, Carbon Capture and Storage (CSS) and Crossrail for the North. Your region will gain 100,000 new well-paid green jobs and 10,000 new council and social homes in the next four years.",
       },
     ]
   }

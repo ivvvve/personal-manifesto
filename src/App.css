@@ -90,6 +90,8 @@ h3 {
   transition: width .3s ease;
   margin-bottom: 4px;
   min-width: 20%;
+  position: sticky;
+  top: 0;
 }
 
 .progress-bg, .progress-label {
@@ -224,6 +226,7 @@ li a {
     height: 100px;
     background: #e20613;
     color: white;
+    width: 100%;
   }
 
   #intro>.btn:hover {
