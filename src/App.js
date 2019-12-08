@@ -127,9 +127,9 @@ class App extends Component {
             <h1>MANIFESTO</h1>
           </div>
         <p>
-          Want to find out what a Labour government would do for you and the people you care about? Simply fill out this quick quiz and we'll tell you about the key Labour policies that will make a direct difference to your life, or to the life of a friend, family member or colleague.
+          Want to find out what a Labour government would do for you and the people you care about? <br/><br/>Simply fill out this quick quiz and we'll tell you about the key Labour policies that will make a direct difference to your life, or to the life of a friend, family member or colleague.
         </p>
-        <div className="btn" onClick={this.posUp}><p>LET'S GO!</p></div>
+        <div className="btn choice" onClick={this.posUp}><p>LET'S GO!</p></div>
         <div id="gifWrap">
           <img src="./img/brexit.gif" alt=""></img>          
           <img src="./img/econ.gif" alt=""></img>

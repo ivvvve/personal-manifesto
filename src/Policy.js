@@ -25,7 +25,7 @@ class Policy extends Component {
 
     hasAll(obj) {
         if(obj.all) {
-            return <li className="choice" onClick={(e) => this.props.inc(e, obj.options.map(choice => Object.assign({ qid: obj.qid }, choice)), obj.name)}>All of the above</li>
+            return <li className="choice" onClick={(e) => this.props.inc(e, obj.options.map(choice => Object.assign({ qid: obj.qid }, choice)), obj.name)}><p>All of the above</p></li>
         }
     }
 
@@ -48,9 +48,7 @@ class Policy extends Component {
                           <li className="choice" key={key} onClick={choice.nest
                               ? (e) => {this.goNest(e, choice.nest)}
                               : (e) => this.props.inc(e, Object.assign({qid: policy.qid}, choice), policy.name)}
-                          >
-                              {choice.text}
-                          </li>
+                          ><p>{choice.text}</p></li>
                       )}
                       {this.hasAll(policy)}
                   </ul>

@@ -17,7 +17,7 @@ class Choices extends Component {
         return (
             <React.Fragment>
 
-            <div className="wrapper">
+            <div id="concludeWrapper" className="wrapper">
                 <div id="concludeHed">
                     <div>
                         <h1>Your</h1> 

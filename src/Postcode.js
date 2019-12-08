@@ -30,9 +30,9 @@ function Postcode({policy, inc}) {
         <input type="text" name="postcode" />
         <input type="submit" value="SHOW ME MY MANIFESTO"/>
       </form>
-      {error &&
-        <p className="postcode-error">{error}</p>
-      }
+        {error &&
+          <p className="postcode-error">{error}</p>
+        }
     </div>
   );
 }
