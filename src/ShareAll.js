@@ -3,26 +3,12 @@ import {
     FacebookShareButton, TwitterShareButton, WhatsappShareButton, FacebookIcon, TwitterIcon, WhatsappIcon
 } from 'react-share';
 import './App.css';
-import { white } from 'color-name';
-
 
 class ShareAll extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {name: ''};
-
-        this.handleChange = this.handleChange.bind(this);
-    }
-
-    handleChange(event) {
-        this.setState({name: event.target.value});
-    }
-
     render() {
         const answerString = this.props.answerString;
 
-        const shareUrl = process.env.PUBLIC_URL + '?' + answerString + '&name=' + this.state.name;
+        const shareUrl = process.env.PUBLIC_URL + '?' + answerString;
         const title = this.props.message;
 
         return (

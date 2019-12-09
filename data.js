@@ -122,12 +122,12 @@ module.exports = [
       {
         text: "Brexit",
         aid: 2,
-        answer: "Within six months of the election, you will get to cast your vote in a legally binding referendum – a final say between remain and a credible leave deal that protects workers rights, consumer standards and the environment."
+        answer: "Within six months of the election, you will get to cast your vote in a legally binding referendum - a final say between remain and a credible leave deal that protects workers rights, consumer standards and the environment."
       },
       {
         text: "Crime",
         aid: 3,
-        answer: "The past ten years have seen 20,000 police officers lost to Tory cuts. Labour will not just replace them, but also equip them better to serve the public – they will be accountable to your community, will be better trained, and actively challenge discrimination."
+        answer: "The past ten years have seen 20,000 police officers lost to Tory cuts. Labour will not just replace them, but also equip them better to serve the public - they will be accountable to your community, will be better trained, and actively challenge discrimination."
       },
       {
         text: "Neglect of where I live",
@@ -152,7 +152,7 @@ module.exports = [
       {
         text: "Making ends meet",
         aid: 8,
-        answer: "No one should live in poverty. Alongside introducing a £10 Real Living Wage, a Labour government will undo the damage of Universal Credit and expand public services. This will be paid for by taxes on the rishest 5% and large corporations, who can afford to pay a bit more."
+        answer: "No one should live in poverty. Alongside introducing a £10 Real Living Wage, a Labour government will undo the damage of Universal Credit and expand public services. This will be paid for by taxes on the richest 5% and large corporations, who can afford to pay a bit more."
       }
     ]
   },
@@ -190,7 +190,7 @@ module.exports = [
         text: "Youth centres",
         aid: 6,
         answer: "After years of cuts and closures, a Labour government will fund youth centres, giving you the accessible social infrastructure your community deserves."
-      }, 
+      },
       {
         text: "Libraries",
         aid: 7,
@@ -210,7 +210,7 @@ module.exports = [
       {
         text: "Shopping on the High Street",
         aid: 2,
-        answer: "Your town's high street is a central space for your community and people's livelihoods. Labour will revive high streets by stopping bank branch closures, banning ATM charges         and giving local government power to put empty shops to good use"
+        answer: "Your town's high street is a central space for your community and people's livelihoods. Labour will revive high streets by stopping bank branch closures, banning ATM charges and giving local government power to put empty shops to good use"
       },
       {
         text: "Arts and culture",
